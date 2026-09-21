@@ -2148,7 +2148,7 @@ body.page-confirmation {
     }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 768px) {
 
     header {
         padding-left: 15px;
@@ -2221,5 +2221,698 @@ body.page-confirmation {
     main > aside {
         box-shadow: none;
         break-inside: avoid;
+    }
+}
+
+/* ============================================================
+   RESPONSIVIDADE — CELULARES MAIS POPULARES NO BRASIL
+   As resoluções abaixo são tratadas por largura de viewport.
+   CSS não identifica a marca do aparelho; portanto, cada faixa
+   atende aparelhos Samsung, Motorola, Xiaomi, Apple etc. que
+   utilizem a mesma largura de tela.
+   
+   Principais marcas consideradas:
+   Samsung • Motorola • Apple • Xiaomi
+   ============================================================ */
+
+
+/* ============================================================
+   320px — aparelhos compactos
+   Exemplos:
+   iPhone SE / aparelhos Android compactos
+   ============================================================ */
+
+@media screen and (max-width: 320px) {
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    header {
+        padding: 30px 12px 25px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+    nav {
+        min-height: auto;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        padding: 8px 5px;
+
+        gap: 3px;
+    }
+
+    nav > a {
+        min-height: 34px;
+
+        padding: 6px 8px;
+
+        font-size: 12px;
+    }
+
+    main,
+    main:has(.cards-grid),
+    main:has(.gallery-grid),
+    main:has(.transport-grid),
+    main:has(.speaker-profile),
+    main:has(table),
+    main:has(.form-container) {
+        width: calc(100% - 18px);
+
+        padding-top: 18px;
+    }
+
+    main > section,
+    main > aside {
+        padding: 14px;
+    }
+
+    main > section > h2,
+    main > aside > h2 {
+        font-size: 18px;
+    }
+
+    .cards-grid li {
+        min-height: 50px;
+
+        padding: 9px 12px;
+
+        font-size: 13px;
+    }
+
+    .step-list li {
+        font-size: 13px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .speaker-profile img {
+        width: 160px;
+    }
+
+    .transport-card {
+        padding: 15px;
+    }
+
+    .transport-card h3 {
+        font-size: 16px;
+    }
+
+    .transport-card p {
+        font-size: 13px;
+    }
+
+    .form-container fieldset {
+        padding: 15px 13px;
+    }
+
+    .checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions .btn-primary,
+    .form-actions .btn-reset {
+        width: 100%;
+    }
+
+    .confirmation-card {
+        padding: 25px 15px;
+    }
+
+    .confirmation-card h1 {
+        font-size: 22px;
+    }
+}
+
+
+/* ============================================================
+   360px — Samsung Galaxy / Motorola / Android
+   ============================================================ */
+
+@media screen and (min-width: 321px) and (max-width: 360px) {
+
+    header {
+        padding: 34px 15px 27px;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        min-height: auto;
+
+        padding: 9px 7px;
+
+        gap: 3px;
+    }
+
+    nav > a {
+        padding: 6px 9px;
+
+        font-size: 12px;
+    }
+
+    main,
+    main:has(.cards-grid),
+    main:has(.gallery-grid),
+    main:has(.transport-grid),
+    main:has(.speaker-profile),
+    main:has(table),
+    main:has(.form-container) {
+        width: calc(100% - 22px);
+    }
+
+    main > section,
+    main > aside {
+        padding: 16px;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-grid li {
+        font-size: 14px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .speaker-profile img {
+        width: 175px;
+    }
+
+    .transport-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container,
+    .map-container iframe {
+        height: 350px;
+    }
+}
+
+
+/* ============================================================
+   375px — iPhone 6/7/8/X/11/12/13/14
+   ============================================================ */
+
+@media screen and (min-width: 361px) and (max-width: 375px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        gap: 4px;
+    }
+
+    nav > a {
+        padding: 7px 10px;
+
+        font-size: 12px;
+    }
+
+    main,
+    main:has(.cards-grid),
+    main:has(.gallery-grid),
+    main:has(.transport-grid),
+    main:has(.speaker-profile),
+    main:has(table),
+    main:has(.form-container) {
+        width: calc(100% - 24px);
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .transport-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container,
+    .map-container iframe {
+        height: 360px;
+    }
+}
+
+
+/* ============================================================
+   390px — iPhone 12/13/14/15/16/17
+   Motorola e Android intermediários
+   ============================================================ */
+
+@media screen and (min-width: 376px) and (max-width: 390px) {
+
+    header {
+        padding: 38px 17px 29px;
+    }
+
+    header h1 {
+        font-size: 29px;
+    }
+
+    header p {
+        font-size: 17px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        padding: 9px 8px;
+
+        gap: 4px;
+    }
+
+    nav > a {
+        padding: 7px 10px;
+
+        font-size: 13px;
+    }
+
+    main,
+    main:has(.cards-grid),
+    main:has(.gallery-grid),
+    main:has(.transport-grid),
+    main:has(.speaker-profile),
+    main:has(table),
+    main:has(.form-container) {
+        width: calc(100% - 26px);
+    }
+
+    main > section,
+    main > aside {
+        padding: 18px;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-grid li {
+        min-height: 52px;
+
+        font-size: 14px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .speaker-profile img {
+        width: 180px;
+    }
+
+    .transport-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container,
+    .map-container iframe {
+        height: 370px;
+    }
+}
+
+
+/* ============================================================
+   393px — iPhone 15/16/17 Pro
+   Xiaomi / Samsung / Motorola
+   ============================================================ */
+
+@media screen and (min-width: 391px) and (max-width: 393px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        gap: 4px;
+    }
+
+    nav > a {
+        padding: 7px 11px;
+
+        font-size: 13px;
+    }
+
+    main,
+    main:has(.cards-grid),
+    main:has(.gallery-grid),
+    main:has(.transport-grid),
+    main:has(.speaker-profile),
+    main:has(table),
+    main:has(.form-container) {
+        width: calc(100% - 28px);
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .transport-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container,
+    .map-container iframe {
+        height: 380px;
+    }
+}
+
+
+/* ============================================================
+   412px — Samsung Galaxy / Motorola / Xiaomi
+   ============================================================ */
+
+@media screen and (min-width: 394px) and (max-width: 412px) {
+
+    header {
+        padding: 40px 18px 31px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 17px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        padding: 9px 10px;
+
+        gap: 4px;
+    }
+
+    nav > a {
+        padding: 7px 11px;
+
+        font-size: 13px;
+    }
+
+    main,
+    main:has(.cards-grid),
+    main:has(.gallery-grid),
+    main:has(.transport-grid),
+    main:has(.speaker-profile),
+    main:has(table),
+    main:has(.form-container) {
+        width: calc(100% - 30px);
+    }
+
+    main > section,
+    main > aside {
+        padding: 20px;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-grid li {
+        min-height: 54px;
+
+        font-size: 15px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .speaker-profile img {
+        width: 190px;
+    }
+
+    .transport-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container,
+    .map-container iframe {
+        height: 400px;
+    }
+}
+
+
+/* ============================================================
+   430px — iPhone Plus / Pro Max
+   Samsung / Motorola / Xiaomi
+   ============================================================ */
+
+@media screen and (min-width: 413px) and (max-width: 430px) {
+
+    header {
+        padding: 42px 20px 32px;
+    }
+
+    header h1 {
+        font-size: 31px;
+    }
+
+    header p {
+        font-size: 18px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        gap: 5px;
+
+        padding: 10px 12px;
+    }
+
+    nav > a {
+        padding: 7px 12px;
+
+        font-size: 13px;
+    }
+
+    main,
+    main:has(.cards-grid),
+    main:has(.gallery-grid),
+    main:has(.transport-grid),
+    main:has(.speaker-profile),
+    main:has(table),
+    main:has(.form-container) {
+        width: calc(100% - 32px);
+    }
+
+    main > section,
+    main > aside {
+        padding: 21px;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-grid li {
+        min-height: 55px;
+
+        font-size: 15px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .speaker-profile img {
+        width: 200px;
+    }
+
+    .transport-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container,
+    .map-container iframe {
+        height: 410px;
+    }
+}
+
+
+/* ============================================================
+   TABLETS PEQUENOS / CELULARES EM PAISAGEM
+   431px — 600px
+   ============================================================ */
+
+@media screen and (min-width: 431px) and (max-width: 600px) {
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        gap: 5px;
+    }
+
+    nav > a {
+        padding: 7px 12px;
+    }
+
+    main,
+    main:has(.cards-grid),
+    main:has(.gallery-grid),
+    main:has(.transport-grid),
+    main:has(.speaker-profile),
+    main:has(table),
+    main:has(.form-container) {
+        width: calc(100% - 36px);
+    }
+
+    .cards-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .transport-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .form-row {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .checkbox-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .checkbox-grid label {
+        white-space: normal;
+    }
+}
+
+
+/* ============================================================
+   GARANTIA CONTRA OVERFLOW EM QUALQUER CELULAR
+   ============================================================ */
+
+@media screen and (max-width: 600px) {
+
+    html {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    header,
+    nav,
+    main,
+    footer {
+        max-width: 100%;
+    }
+
+    img,
+    iframe,
+    input,
+    select,
+    textarea {
+        max-width: 100%;
+    }
+
+    table {
+        max-width: none;
+    }
+
+    dialog {
+        max-width: calc(100vw - 30px);
     }
 }
