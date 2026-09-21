@@ -1,0 +1,1472 @@
+:root {
+    --cor-fundo: #f8f5ef;
+    --cor-fundo-card: #ffffff;
+    --cor-principal: #59382e;
+    --cor-destaque: #a54c3b;
+    --cor-texto: #171717;
+    --cor-texto-secundario: #55504c;
+    --cor-borda: #d8d0c7;
+    --cor-borda-clara: #e4ddd4;
+    --cor-manifesto: #eee1d1;
+
+    --fonte-titulo: Georgia, "Times New Roman", serif;
+    --fonte-texto: Arial, Helvetica, sans-serif;
+
+    --largura-site: 1000px;
+    --largura-conteudo: 500px;
+    --largura-formulario: 650px;
+
+    --espaco-xs: 8px;
+    --espaco-sm: 12px;
+    --espaco-md: 20px;
+    --espaco-lg: 32px;
+    --espaco-xl: 48px;
+    --espaco-xxl: 72px;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte-texto);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: var(--cor-principal);
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+/* =========================================================
+   CABEÇALHO PRINCIPAL
+   ========================================================= */
+
+body > header {
+    width: min(calc(100% - 80px), var(--largura-site));
+    margin: 0 auto;
+    padding: 26px 0 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--cor-borda-clara);
+}
+
+body > header .slogan {
+    margin: 0 0 8px;
+    color: var(--cor-destaque);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+body > header > h1 {
+    margin: 0;
+    color: var(--cor-principal);
+    font-family: var(--fonte-titulo);
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+body > header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin-top: 24px;
+}
+
+body > header nav a {
+    color: var(--cor-texto);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+body > header nav a:hover {
+    color: var(--cor-destaque);
+}
+
+
+/* =========================================================
+   ESTRUTURA PRINCIPAL
+   ========================================================= */
+
+main {
+    width: min(calc(100% - 80px), var(--largura-site));
+    margin: 0 auto;
+}
+
+main > section > header {
+    text-align: center;
+}
+
+.categoria {
+    margin: 0 0 10px;
+    color: var(--cor-destaque);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* =========================================================
+   HOME
+   ========================================================= */
+
+#inicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin: 58px auto 0;
+    max-width: 900px;
+    padding-bottom: 42px;
+    border-bottom: 1px solid var(--cor-borda-clara);
+}
+
+#inicio article {
+    padding-right: 10px;
+}
+
+#inicio h2 {
+    margin: 0 0 16px;
+    color: var(--cor-principal);
+    font-family: var(--fonte-titulo);
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.05;
+}
+
+#inicio article > p:not(.categoria) {
+    max-width: 450px;
+    margin: 0 0 18px;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+#inicio .botao {
+    display: inline-block;
+    padding: 9px 18px;
+    background: var(--cor-destaque);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#inicio .botao:hover {
+    background: var(--cor-principal);
+}
+
+#inicio figure {
+    margin: 0;
+}
+
+#inicio figure img {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+}
+
+#inicio figcaption {
+    margin-top: 6px;
+    color: var(--cor-texto-secundario);
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   RECEITAS DA SEMANA - HOME
+   ========================================================= */
+
+#escolhas {
+    max-width: 900px;
+    margin: 38px auto 0;
+}
+
+#escolhas > header {
+    margin-bottom: 30px;
+}
+
+#escolhas > header h2 {
+    margin: 0;
+    color: var(--cor-principal);
+    font-family: var(--fonte-titulo);
+    font-size: 25px;
+    font-weight: 400;
+}
+
+#escolhas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+
+#escolhas > header {
+    grid-column: 1 / -1;
+}
+
+#escolhas > article {
+    min-width: 0;
+}
+
+#escolhas figure {
+    margin: 0 0 10px;
+}
+
+#escolhas figure img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+#escolhas figcaption {
+    margin-top: 5px;
+    color: var(--cor-texto-secundario);
+    font-size: 9px;
+}
+
+#escolhas h3 {
+    margin: 10px 0 6px;
+    color: var(--cor-principal);
+    font-family: var(--fonte-titulo);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#escolhas article p {
+    margin: 0 0 8px;
+    font-size: 12px;
+}
+
+#escolhas article a {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   MANIFESTO
+   ========================================================= */
+
+#manifesto {
+    max-width: 900px;
+    margin: 42px auto 0;
+}
+
+#manifesto blockquote {
+    margin: 0;
+    padding: 28px 40px;
+    background: var(--cor-manifesto);
+    color: var(--cor-principal);
+    font-family: var(--fonte-titulo);
+    font-size: 21px;
+    font-style: italic;
+    line-height: 1.45;
+    text-align: center;
+}
+
+
+/* =========================================================
+   DICAS NA HOME
+   ========================================================= */
+
+#dicas-home {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 50px;
+    max-width: 900px;
+    margin: 48px auto 0;
+    align-items: center;
+}
+
+#dicas-home article h2 {
+    margin: 0 0 10px;
+    color: var(--cor-principal);
+    font-family: var(--fonte-titulo);
+    font-size: 22px;
+    font-weight: 400;
+}
+
+#dicas-home article > p:not(.categoria) {
+    margin: 0 0 5px;
+    font-size: 12px;
+}
+
+#dicas-home article a {
+    font-size: 11px;
+}
+
+#dicas-home aside {
+    padding: 16px 20px;
+    background: var(--cor-fundo-card);
+    border-left: 3px solid var(--cor-destaque);
+}
+
+#dicas-home aside h3 {
+    margin: 0 0 6px;
+    color: var(--cor-principal);
+    font-family: var(--fonte-titulo);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#dicas-home aside p {
+    margin: 0;
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   NEWSLETTER
+   ========================================================= */
+
+#newsletter {
+    width: min(100%, 650px);
+    margin: 60px auto 0;
+    padding: 30px 0 34px;
+    border-top: 1px solid var(--cor-borda-clara);
+    border-bottom: 1px solid var(--cor-borda-clara);
+}
+
+#newsletter header {
+    text-align: center;
+}
+
+#newsletter h2 {
+    margin: 0 0 24px;
+    color: var(--cor-principal);
+    font-family: var(--fonte-titulo);
+    font-size: 23px;
+    font-weight: 400;
+}
+
+#newsletter form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 6px;
+    align-items: end;
+}
+
+#newsletter label {
+    grid-column: 1 / -1;
+    margin-bottom: 3px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+#newsletter input {
+    width: 100%;
+    height: 34px;
+    padding: 7px 10px;
+    background: #fff;
+    border: 1px solid var(--cor-borda);
+    outline: none;
+}
+
+#newsletter input:focus {
+    border-color: var(--cor-destaque);
+}
+
+#newsletter button {
+    height: 34px;
+    padding: 0 18px;
+    background: var(--cor-destaque);
+    color: #fff;
+    border: 1px solid var(--cor-destaque);
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   PÁGINA DE RECEITA
+   ========================================================= */
+
+.pagina-receita {
+    width: var(--largura-conteudo);
+    max-width: 100%;
+    margin: 55px auto 0;
+}
+
+.pagina-receita > header {
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+.pagina-receita > header h1 {
+    margin: 0;
+    color: var(--cor-principal);
+    font-family: var(--fonte-titulo);
+    font-size: 29px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.pagina-receita > figure {
+    margin: 0 0 24px;
+    text-align: center;
+}
+
+.pagina-receita > figure img {
+    width: 100%;
+    height: auto;
+    max-height: 330px;
+    object-fit: cover;
+}
+
+.pagina-receita > figure figcaption {
+    margin-top: 6px;
+    color: var(--cor-texto-secundario);
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   CARDS DAS RECEITAS
+   ========================================================= */
+
+.receita-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.receita-card-box {
+    width: 100%;
+    margin: 0;
+    padding: 18px 20px;
+    background: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+}
+
+.info-header,
+.receita-card-box summary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.receita-card-box summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.receita-card-box summary::-webkit-details-marker {
+    display: none;
+}
+
+.receita-card-box summary::after {
+    content: "⌄";
+    margin-left: auto;
+    color: var(--cor-texto);
+    font-size: 15px;
+}
+
+.receita-card-icon {
+    display: flex;
+    flex: 0 0 28px;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 50%;
+}
+
+.material-symbols-outlined {
+    font-size: 15px;
+    line-height: 1;
+}
+
+.receita-card-title-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.receita-card-title {
+    color: var(--cor-texto);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.receita-card-subtitle {
+    margin-top: 2px;
+    color: var(--cor-texto-secundario);
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.receita-card-content {
+    padding: 12px 0 0 40px;
+}
+
+.receita-card-content ul,
+.receita-card-content ol {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.receita-card-content li {
+    margin-bottom: 2px;
+    font-size: 11px;
+}
+
+.receita-card-content p {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.55;
+    text-align: center;
+}
+
+.info-bar-horizontal {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 15px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.info-bar-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--cor-texto-secundario);
+    font-size: 9px;
+}
+
+.info-bar-item .material-symbols-outlined {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   PÁGINA DE RECEITAS
+   ========================================================= */
+
+main > section > header h1 {
+    margin: 0;
+    color: var(--cor-principal);
+    font-family: var(--fonte-titulo);
+    font-size: 30px;
+    font-weight: 400;
+}
+
+main > section:first-child > header {
+    margin-top: 48px;
+    margin-bottom: 35px;
+}
+
+.card-horizontal {
+    display: grid;
+    grid-template-columns: 165px 1fr;
+    width: 500px;
+    max-width: 100%;
+    min-height: 165px;
+    margin: 0 auto 16px;
+    background: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card-horizontal-img {
+    width: 100%;
+    height: 165px;
+    object-fit: cover;
+}
+
+.card-horizontal-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 18px;
+}
+
+.card-horizontal-content h2 {
+    margin: 0 0 10px;
+    color: var(--cor-texto);
+    font-family: var(--fonte-texto);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.card-meta {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 12px;
+    color: var(--cor-texto-secundario);
+    font-size: 11px;
+}
+
+.card-meta .material-symbols-outlined {
+    font-size: 14px;
+}
+
+.card-horizontal-content p {
+    margin: 0 0 10px;
+    font-size: 12px;
+}
+
+.card-horizontal-content footer {
+    margin-top: auto;
+}
+
+.card-link {
+    color: var(--cor-texto);
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   CONTATO
+   ========================================================= */
+
+main > section > .text-center {
+    margin: 30px auto 26px;
+    font-size: 12px;
+}
+
+main > section > form {
+    width: var(--largura-formulario);
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+fieldset {
+    margin: 0 0 20px;
+    padding: 14px 15px 12px;
+    border: 1px solid #ccbbae;
+}
+
+legend {
+    padding: 0 8px;
+    color: var(--cor-principal);
+    font-family: var(--fonte-titulo);
+    font-size: 12px;
+}
+
+fieldset p {
+    margin: 0 0 12px;
+}
+
+fieldset p:last-child {
+    margin-bottom: 0;
+}
+
+fieldset label {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+fieldset input[type="text"],
+fieldset input[type="email"],
+fieldset input[type="tel"],
+fieldset select,
+fieldset textarea {
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px 10px;
+    background: #fff;
+    border: 1px solid #ccbbae;
+    border-radius: 0;
+    outline: none;
+}
+
+fieldset input[type="text"],
+fieldset input[type="email"],
+fieldset input[type="tel"],
+fieldset select {
+    height: 34px;
+}
+
+fieldset textarea {
+    min-height: 138px;
+    resize: vertical;
+}
+
+fieldset input:focus,
+fieldset select:focus,
+fieldset textarea:focus {
+    border-color: var(--cor-destaque);
+}
+
+fieldset > p:not(:has(label)) {
+    margin-bottom: 7px;
+    font-size: 11px;
+}
+
+fieldset input[type="radio"] {
+    width: auto;
+    margin: 0 4px 0 0;
+}
+
+fieldset label:not([for]) {
+    margin-right: 10px;
+    font-weight: 400;
+}
+
+form > p {
+    margin: 0 0 14px;
+}
+
+form > p label {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+form input[type="checkbox"] {
+    margin: 0 4px 0 0;
+    vertical-align: middle;
+}
+
+form button {
+    padding: 9px 18px;
+    margin-right: 5px;
+    background: var(--cor-destaque);
+    color: #fff;
+    border: 0;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: var(--cor-principal);
+}
+
+
+/* =========================================================
+   PÁGINA DE DICAS
+   ========================================================= */
+
+.dica-cards-container {
+    width: 390px;
+    max-width: 100%;
+    margin: 28px auto 0;
+}
+
+.dica-card-horizontal {
+    display: grid;
+    grid-template-columns: 78px 1fr;
+    min-height: 78px;
+    margin-bottom: 10px;
+    background: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dica-card-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background: #fafafa;
+    border-right: 1px solid var(--cor-borda);
+}
+
+.dica-card-icon-wrapper .material-symbols-outlined {
+    font-size: 30px;
+}
+
+.dica-card-content {
+    padding: 12px 15px;
+}
+
+.dica-card-content h2 {
+    margin: 0 0 4px;
+    color: var(--cor-principal);
+    font-family: var(--fonte-titulo);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.dica-card-content p {
+    margin: 0;
+    color: var(--cor-texto-secundario);
+    font-size: 10px;
+    line-height: 1.45;
+}
+
+.video-card-horizontal {
+    margin-top: 10px;
+    padding: 15px;
+    background: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+}
+
+.video-card-horizontal h2 {
+    margin: 0 0 12px;
+    color: var(--cor-principal);
+    font-family: var(--fonte-titulo);
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.video-card-horizontal iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: 0;
+}
+
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+body > footer {
+    width: min(calc(100% - 80px), var(--largura-site));
+    margin: 60px auto 0;
+    padding: 28px 0 35px;
+    border-top: 1px solid var(--cor-borda-clara);
+    text-align: center;
+}
+
+body > footer p {
+    margin: 0 0 7px;
+    font-size: 11px;
+}
+
+body > footer p:first-child {
+    margin-bottom: 2px;
+}
+
+body > footer strong {
+    color: var(--cor-principal);
+    font-family: var(--fonte-titulo);
+    font-size: 16px;
+}
+
+body > footer address {
+    margin: 0 0 8px;
+    color: var(--cor-texto-secundario);
+    font-size: 10px;
+    font-style: normal;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE - TABLETS
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    body > header,
+    main,
+    body > footer {
+        width: min(calc(100% - 40px), var(--largura-site));
+    }
+
+    #inicio {
+        gap: 35px;
+    }
+
+    #inicio h2 {
+        font-size: 34px;
+    }
+
+    #inicio figure img {
+        height: 260px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE - CELULARES
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    :root {
+        --espaco-mobile: 15px;
+    }
+
+    body {
+        font-size: 14px;
+        overflow-x: hidden;
+    }
+
+    body > header {
+        width: calc(100% - 30px);
+        padding: 30px 0 20px;
+    }
+
+    body > header .slogan {
+        margin-bottom: 18px;
+        font-size: 10px;
+        letter-spacing: 2px;
+        white-space: nowrap;
+    }
+
+    body > header > h1 {
+        max-width: 330px;
+        margin: 0 auto;
+        font-size: 42px;
+        line-height: 1.35;
+    }
+
+    body > header nav {
+        gap: 0;
+        justify-content: center;
+        margin-top: 25px;
+    }
+
+    body > header nav a {
+        width: auto;
+        margin: 0 13px 22px;
+        font-size: 13px;
+    }
+
+    main {
+        width: calc(100% - 30px);
+    }
+
+    /* -----------------------------------------------------
+       HOME
+       ----------------------------------------------------- */
+
+    #inicio {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        width: 100%;
+        margin-top: 52px;
+        padding-bottom: 38px;
+        align-items: stretch;
+    }
+
+    #inicio article {
+        padding: 0;
+    }
+
+    #inicio h2 {
+        margin-bottom: 15px;
+        font-size: 31px;
+        line-height: 1.08;
+    }
+
+    #inicio article > p:not(.categoria) {
+        max-width: none;
+        font-size: 11px;
+    }
+
+    #inicio .botao {
+        padding: 9px 13px;
+        font-size: 10px;
+    }
+
+    #inicio figure img {
+        height: auto;
+        max-height: none;
+        aspect-ratio: 1.45 / 1;
+        object-fit: cover;
+    }
+
+    #inicio figcaption {
+        font-size: 8px;
+    }
+
+    /* -----------------------------------------------------
+       RECEITAS DA SEMANA
+       ----------------------------------------------------- */
+
+    #escolhas {
+        display: block;
+        width: 100%;
+        margin-top: 32px;
+    }
+
+    #escolhas > header {
+        margin-bottom: 34px;
+    }
+
+    #escolhas > header h2 {
+        font-size: 21px;
+    }
+
+    #escolhas > article {
+        margin-bottom: 25px;
+    }
+
+    #escolhas figure {
+        margin-bottom: 8px;
+    }
+
+    #escolhas figure img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1.45 / 1;
+        object-fit: cover;
+    }
+
+    #escolhas h3 {
+        font-size: 17px;
+    }
+
+    #escolhas article p {
+        font-size: 10px;
+    }
+
+    #escolhas article a {
+        font-size: 10px;
+    }
+
+    /* -----------------------------------------------------
+       MANIFESTO
+       ----------------------------------------------------- */
+
+    #manifesto {
+        width: 100%;
+        margin-top: 36px;
+    }
+
+    #manifesto blockquote {
+        padding: 28px 25px;
+        font-size: 19px;
+        line-height: 1.5;
+    }
+
+    /* -----------------------------------------------------
+       DICAS HOME
+       ----------------------------------------------------- */
+
+    #dicas-home {
+        display: block;
+        width: 100%;
+        margin-top: 35px;
+    }
+
+    #dicas-home article {
+        margin-bottom: 30px;
+    }
+
+    #dicas-home article h2 {
+        font-size: 21px;
+    }
+
+    #dicas-home article > p:not(.categoria) {
+        font-size: 10px;
+    }
+
+    #dicas-home article a {
+        font-size: 9px;
+    }
+
+    #dicas-home aside {
+        padding: 15px;
+    }
+
+    #dicas-home aside h3 {
+        font-size: 13px;
+    }
+
+    #dicas-home aside p {
+        font-size: 9px;
+    }
+
+    /* -----------------------------------------------------
+       NEWSLETTER
+       ----------------------------------------------------- */
+
+    #newsletter {
+        width: 100%;
+        margin-top: 45px;
+        padding: 28px 0 30px;
+    }
+
+    #newsletter h2 {
+        font-size: 21px;
+    }
+
+    #newsletter form {
+        grid-template-columns: 1fr auto;
+        gap: 5px;
+    }
+
+    #newsletter input {
+        min-width: 0;
+    }
+
+    #newsletter button {
+        padding: 0 13px;
+    }
+
+    /* -----------------------------------------------------
+       PÁGINAS DE RECEITA
+       ----------------------------------------------------- */
+
+    .pagina-receita {
+        width: 100%;
+        margin-top: 55px;
+    }
+
+    .pagina-receita > header {
+        margin-bottom: 28px;
+    }
+
+    .pagina-receita > header h1 {
+        font-size: 34px;
+        line-height: 1.4;
+    }
+
+    .pagina-receita > figure {
+        margin-bottom: 28px;
+    }
+
+    .pagina-receita > figure img {
+        width: 100%;
+        max-height: none;
+        aspect-ratio: 1.45 / 1;
+        object-fit: cover;
+    }
+
+    .pagina-receita > figure figcaption {
+        font-size: 8px;
+    }
+
+    .receita-cards-container {
+        gap: 24px;
+    }
+
+    .receita-card-box {
+        padding: 18px 14px;
+    }
+
+    .info-header,
+    .receita-card-box summary {
+        gap: 12px;
+    }
+
+    .receita-card-icon {
+        flex-basis: 30px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .receita-card-title {
+        font-size: 13px;
+    }
+
+    .receita-card-subtitle {
+        max-width: 210px;
+        font-size: 9px;
+        line-height: 1.4;
+    }
+
+    .receita-card-content {
+        padding: 14px 4px 0 45px;
+    }
+
+    .receita-card-content li {
+        font-size: 11px;
+        line-height: 1.45;
+    }
+
+    .receita-card-content p {
+        font-size: 11px;
+        line-height: 1.55;
+    }
+
+    .info-bar-horizontal {
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-top: 15px;
+    }
+
+    .info-bar-item {
+        font-size: 9px;
+    }
+
+    /* -----------------------------------------------------
+       PÁGINA DE RECEITAS
+       ----------------------------------------------------- */
+
+    main > section:first-child > header {
+        margin-top: 55px;
+        margin-bottom: 40px;
+    }
+
+    main > section > header h1 {
+        font-size: 34px;
+    }
+
+    .card-horizontal {
+        display: grid;
+        grid-template-columns: 58% 42%;
+        width: 100%;
+        min-height: 0;
+        margin-bottom: 20px;
+    }
+
+    .card-horizontal-img {
+        width: 100%;
+        height: 100%;
+        min-height: 330px;
+        object-fit: cover;
+    }
+
+    .card-horizontal-content {
+        min-width: 0;
+        padding: 20px 14px;
+    }
+
+    .card-horizontal-content h2 {
+        font-size: 18px;
+        line-height: 1.45;
+    }
+
+    .card-meta {
+        font-size: 11px;
+    }
+
+    .card-horizontal-content p {
+        font-size: 11px;
+        line-height: 1.55;
+    }
+
+    .card-link {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    /* -----------------------------------------------------
+       CONTATO
+       ----------------------------------------------------- */
+
+    main > section > .text-center {
+        margin: 38px auto 36px;
+        padding: 0 18px;
+        font-size: 16px;
+        line-height: 1.55;
+    }
+
+    main > section > form {
+        width: 100%;
+    }
+
+    fieldset {
+        margin-bottom: 24px;
+        padding: 18px 22px 20px;
+    }
+
+    legend {
+        font-size: 14px;
+    }
+
+    fieldset p {
+        margin-bottom: 17px;
+    }
+
+    fieldset label {
+        font-size: 15px;
+    }
+
+    fieldset input[type="text"],
+    fieldset input[type="email"],
+    fieldset input[type="tel"],
+    fieldset select {
+        height: 48px;
+        margin-top: 8px;
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+
+    fieldset textarea {
+        min-height: 200px;
+        margin-top: 8px;
+        font-size: 16px;
+    }
+
+    fieldset > p:not(:has(label)) {
+        font-size: 15px;
+    }
+
+    fieldset label:not([for]) {
+        font-size: 15px;
+    }
+
+    form > p label {
+        font-size: 15px;
+    }
+
+    form button {
+        min-width: 93px;
+        min-height: 49px;
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    /* -----------------------------------------------------
+       DICAS
+       ----------------------------------------------------- */
+
+    .dica-cards-container {
+        width: 100%;
+        margin-top: 36px;
+    }
+
+    .dica-card-horizontal {
+        grid-template-columns: 34% 66%;
+        min-height: 135px;
+        margin-bottom: 14px;
+    }
+
+    .dica-card-icon-wrapper .material-symbols-outlined {
+        font-size: 38px;
+    }
+
+    .dica-card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 16px 18px;
+    }
+
+    .dica-card-content h2 {
+        margin-bottom: 7px;
+        font-size: 17px;
+        line-height: 1.3;
+    }
+
+    .dica-card-content p {
+        font-size: 13px;
+        line-height: 1.55;
+    }
+
+    .video-card-horizontal {
+        margin-top: 14px;
+        padding: 20px;
+    }
+
+    .video-card-horizontal h2 {
+        margin-bottom: 18px;
+        font-size: 17px;
+    }
+
+    .video-card-horizontal iframe {
+        aspect-ratio: 9 / 16;
+        width: 100%;
+        height: auto;
+    }
+
+    /* -----------------------------------------------------
+       RODAPÉ
+       ----------------------------------------------------- */
+
+    body > footer {
+        width: calc(100% - 30px);
+        margin-top: 65px;
+        padding: 28px 0 38px;
+    }
+
+    body > footer p {
+        font-size: 13px;
+    }
+
+    body > footer strong {
+        font-size: 20px;
+    }
+
+    body > footer address {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+}
+
+
+/* =========================================================
+   CELULARES MUITO PEQUENOS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    body > header > h1 {
+        font-size: 40px;
+    }
+
+    body > header nav a {
+        margin-left: 11px;
+        margin-right: 11px;
+    }
+
+    #inicio h2 {
+        font-size: 29px;
+    }
+
+    .pagina-receita > header h1 {
+        font-size: 32px;
+    }
+
+    .card-horizontal {
+        grid-template-columns: 57% 43%;
+    }
+
+    .card-horizontal-content {
+        padding: 18px 12px;
+    }
+
+    .card-horizontal-content h2 {
+        font-size: 17px;
+    }
+
+    .card-horizontal-content p {
+        font-size: 10px;
+    }
+
+    .dica-card-content {
+        padding: 14px;
+    }
+
+    .dica-card-content h2 {
+        font-size: 16px;
+    }
+
+    .dica-card-content p {
+        font-size: 12px;
+    }
+}
